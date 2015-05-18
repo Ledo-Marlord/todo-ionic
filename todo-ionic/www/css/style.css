@@ -3,5 +3,76 @@
 }
 
 #login-content {
-    margin-top: 40%;
+    margin-top: 30%;
+}
+
+#login-title {
+    text-align: center !important;
+    font-size: 35px;
+    margin-bottom: 30%;
+    margin-top: 10%;
+    border: none;
+    color: white;
+}
+
+.login-item {
+    background-color: white !important;
+}
+
+#login-form {
+    margin-bottom: 20%;
+}
+
+#create-account {
+    padding: 0;
+    font-size: .85em;
+    color: #E8F5E9;
+}
+
+#forgot-password {
+    padding: 0;
+    font-size: .85em;
+    color: #E8F5E9;
+}
+
+.notebook-background {
+    background-image: url('../img/notebook-731212_1280-slimmed.jpg');
+}
+
+.register-background {
+    background-image: url('../img/wood-549169_1280.jpg');
+}
+
+#register-content {
+    margin-top: 30%;
+}
+
+#register-title {
+    text-align: center !important;
+    font-size: 35px;
+    margin-bottom: 30%;
+    margin-top: 10%;
+    border: none;
+    color: white;
+}
+
+.register-item {
+    background-color: white !important;
+}
+
+#register-form {
+    margin-bottom: 8%;
+}
+
+.homepage-background {
+    background-color: #CFD8DC;
+}
+
+.home-list-item {
+    background-color: white !important;
+    text-align: left !important;
+}
+
+.strikethrough {
+    text-decoration: line-through !important;
 }

@@ -18,7 +18,7 @@
         });
     }
 
-    function config($stateProvider, $urlRouterProvider) {
+    function config($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
         // Ionic uses AngularUI Router which uses the concept of states
         // Learn more here: https://github.com/angular-ui/ui-router
@@ -39,6 +39,12 @@
                 controller: 'aboutController'
             })
 
+            .state('register', {
+                url: '/register',
+                templateUrl: 'templates/register.html',
+                controller: 'registerController'
+            })
+
             .state('login', {
                 url: '/login',
                 templateUrl: 'templates/login.html',
@@ -47,6 +53,9 @@
 
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/login');
+
+        $ionicConfigProvider.backButton.previousTitleText(false).text('');
+
 
     }
 }());
