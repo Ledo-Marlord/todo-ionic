@@ -20,16 +20,19 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/services.js"></script>
+    <script src="js/app-kickoff.js"></script>
+    <script src="js/controllers/homeController.js"></script>
+    <script src="js/controllers/aboutController.js"></script>
+    <script src="js/controllers/userController.js"></script>
+    <script src="js/services/userService.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <link href="lib/ionic-material/dist/ionic.material.min.css" rel="stylesheet">
+    <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
   </head>
-  <body ng-app="starter">
-    <!--
-      The nav bar that will be updated as we navigate between views.
-    -->
-    <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
+  <body ng-app="twoDueApp">
+    <ion-nav-bar class="bar-stable bar-dark bar-header">
+      <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
     <!--
       The views will be rendered in the <ion-nav-view> directive below
