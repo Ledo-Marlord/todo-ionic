@@ -8,8 +8,8 @@
 
 #login-title {
     text-align: center !important;
-    font-size: 35px;
-    margin-bottom: 30%;
+    font-size: 40px;
+    margin-bottom: 20%;
     margin-top: 10%;
     border: none;
     color: white;
@@ -20,7 +20,7 @@
 }
 
 #login-form {
-    margin-bottom: 20%;
+    margin-bottom: 5%;
 }
 
 #create-account {
@@ -50,7 +50,7 @@
 #register-title {
     text-align: center !important;
     font-size: 35px;
-    margin-bottom: 30%;
+    margin-bottom: 20%;
     margin-top: 10%;
     border: none;
     color: white;
@@ -61,7 +61,7 @@
 }
 
 #register-form {
-    margin-bottom: 8%;
+    margin-bottom: 5%;
 }
 
 .homepage-background {
@@ -71,8 +71,11 @@
 .home-list-item {
     background-color: white !important;
     text-align: left !important;
+    box-shadow: none !important;
 }
 
 .strikethrough {
     text-decoration: line-through !important;
+    background-color: #78909C !important;
+    color: white !important;
 }

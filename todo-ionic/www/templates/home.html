@@ -1,14 +1,20 @@
 <ion-view view-title="{{title}}">
-    <ion-content class="homepage-background">
-        <ion-refresher pulling-text="Removing Checked" on-refresh="clearCompleted()"></ion-refresher>
-        <ion-item collection-repeat="list in lists" class="button home-list-item" ng-class="list.completed ? 'strikethrough' : ''" onclick="window.location.href='#/home'" data="{{list.title}}" ng-click="console(list.title); list.completed = !list.completed; console(list.completed);">
+    <ion-content class="homepage-background has-footer">
+        <ion-refresher pulling-text="Remove Checked" on-refresh="clearCompleted()"></ion-refresher>
+        <ion-item collection-repeat="list in lists"
+                  class="button home-list-item"
+                  ng-class="list.completed ? 'strikethrough' : ''"
+                  data="{{list.title}}"
+                  on-hold="console('Hello')"
+                  on-swipe-left="list.completed = !list.completed;"
+                  on-swipe-right="list.completed = !list.completed;">
             {{list.title}}
         </ion-item>
     </ion-content>
     <div class="bar bar-footer homepage-background">
         <div class="buttons buttons-right">
-            <button class="button button-energized-900 button-fab" ng-click="newList('hello', false);">
-                <i class="icon ion-code royal"></i>
+            <button class="button button-positive button-fab" ng-click="newList();">
+                <i class="icon ion-plus white"></i>
             </button>
         </div>
     </div>

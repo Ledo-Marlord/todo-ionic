@@ -15,6 +15,10 @@
                 // org.apache.cordova.statusbar required
                 StatusBar.styleLightContent();
             }
+
+            ionic.Platform.isFullScreen = true;
+
+            document.addEventListener('focusout', function(e) {window.scrollTo(0, 0)});
         });
     }
 
