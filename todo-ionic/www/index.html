@@ -22,6 +22,7 @@
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/app-kickoff.js"></script>
+    <script src="js/controllers/navController.js"></script>
     <script src="js/controllers/homeController.js"></script>
     <script src="js/controllers/aboutController.js"></script>
     <script src="js/controllers/userController.js"></script>
@@ -33,10 +34,10 @@
     <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
   </head>
   <body ng-app="twoDueApp">
-    <ion-nav-bar class="bar-stable bar-dark bar-header">
+    <ion-nav-bar class="bar-stable bar-dark bar-header" ng-controller="navController">
       <ion-nav-back-button></ion-nav-back-button>
-      <ion-nav-buttons side="secondary" ng-if="window.location.href='#/about'">
-        <button onclick="window.location.href='#/about'" class="button">About Us</button>
+      <ion-nav-buttons ng-show="" side="secondary">
+        <button class="button button-icon button-clear ion-android-more-vertical" ng-click="openPopover($event)"></button>
       </ion-nav-buttons>
     </ion-nav-bar>
     <!--

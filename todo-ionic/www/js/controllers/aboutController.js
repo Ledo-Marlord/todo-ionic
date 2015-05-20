@@ -4,6 +4,6 @@
         .controller('aboutController', aboutController);
 
     function aboutController($scope) {
-        $scope.title = "About";
+        $scope.title = "About Us";
     }
 }());

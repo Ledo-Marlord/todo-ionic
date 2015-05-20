@@ -10,6 +10,11 @@
                   on-swipe-right="list.completed = !list.completed;">
             {{list.title}}
         </ion-item>
+        <p ng-show="!lists.length" class="empty-list text-center">
+            <i class="icon ion-sad-outline black empty-list-icon"></i>
+            <br/>
+            <span onclick="window.location.href='#/about'">Nothing Here</span>
+        </p>
     </ion-content>
     <div class="bar bar-footer homepage-background">
         <div class="buttons buttons-right">

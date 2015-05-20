@@ -10,16 +10,7 @@
 
         vm.lists = [];
 
-        vm.lists = [{title: '1 hello', completed: true},
-                    {title: '2 buy eggs', completed: false},
-                    {title: '3 do something', completed: false},
-                    {title: '4 show a list', completed: false},
-                    {title: '5 drive a car', completed: false},
-                    {title: '6 buy a boat', completed: false},
-                    {title: '7 say Hello to the World', completed: false},
-                    {title: '8 stuff', completed: false},
-                    {title: '9 do a thing', completed: false},
-                    {title: '10 fklsdfkkdsj', completed: false}];
+        vm.lists = [{title: '1 hello', completed: true}];
 
         vm.console = function (message) {
             console.log(message);

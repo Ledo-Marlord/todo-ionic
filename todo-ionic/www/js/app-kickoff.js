@@ -59,7 +59,5 @@
         $urlRouterProvider.otherwise('/login');
 
         $ionicConfigProvider.backButton.previousTitleText(false).text('');
-
-
     }
 }());
