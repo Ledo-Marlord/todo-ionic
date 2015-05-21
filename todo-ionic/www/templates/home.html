@@ -8,10 +8,11 @@
                   on-hold="console('Hello')"
                   on-swipe-left="list.completed = !list.completed;"
                   on-swipe-right="list.completed = !list.completed;">
-            {{list.title}}
+            <input class="home-list-item home-list-input" type="text" value="{{list.title}}">
         </ion-item>
         <p ng-show="!lists.length" class="empty-list text-center">
             <i class="icon ion-sad-outline black empty-list-icon"></i>
+            <br/>
             <br/>
             <span onclick="window.location.href='#/about'">Nothing Here</span>
         </p>

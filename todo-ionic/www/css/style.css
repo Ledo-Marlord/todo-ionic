@@ -74,6 +74,10 @@
     box-shadow: none !important;
 }
 
+.home-list-input {
+    background-color: transparent !important;
+}
+
 .strikethrough {
     text-decoration: line-through !important;
     background-color: #78909C !important;
