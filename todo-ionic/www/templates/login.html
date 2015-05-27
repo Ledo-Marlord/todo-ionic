@@ -5,6 +5,18 @@
                 <span style="color: dimgray;">2</span>Due
             </div>
 
+            <!--TODO: Working through the steps for the oauth: https://developers.google.com/+/web/signin/add-button -->
+
+            <span id="signinButton">
+                <span
+                  class="g-signin"
+                  data-callback="signinCallback"
+                  data-clientid="CLIENT_ID"
+                  data-cookiepolicy="single_host_origin"
+                  data-requestvisibleactions="http://schema.org/AddAction"
+                  data-scope="profile">
+                </span>
+            </span>
             <div class="item">
                 <button class="button button-block button-positive" id="login-submit" onclick="window.location.href='#/home'">
                     GO
