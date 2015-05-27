@@ -43,12 +43,6 @@
                 controller: 'aboutController'
             })
 
-            .state('register', {
-                url: '/register',
-                templateUrl: 'templates/register.html',
-                controller: 'registerController'
-            })
-
             .state('login', {
                 url: '/login',
                 templateUrl: 'templates/login.html',
