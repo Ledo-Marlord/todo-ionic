@@ -10,7 +10,7 @@
 
         vm.lists = [];
 
-        vm.lists = [{title: '1 hello', completed: true}];
+        vm.lists = [{title: '1 hello', completed: true, editable: false}];
 
         vm.console = function (message) {
             console.log(message);
@@ -25,7 +25,7 @@
             var randomNumber = chance.integer({min:0, max:9});
             var randomWord = chance.word();
             var randomValue = chance.bool();
-            vm.lists.push({title: randomNumber + ' ' + randomWord, completed: randomValue});
+            vm.lists.push({title: randomNumber + ' ' + randomWord, completed: randomValue, editable: false});
         };
 
         vm.clearCompleted = function () {

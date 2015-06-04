@@ -5,11 +5,18 @@
                   class="button home-list-item"
                   ng-class="list.completed ? 'strikethrough' : ''"
                   data="{{list.title}}"
-                  on-hold="onHold(list.title);"
                   ui-sref="list({listId: list.title})"
                   on-swipe-left="list.completed = !list.completed;"
-                  on-swipe-right="list.completed = !list.completed;">
-            <input class="home-list-item home-list-input" type="text" value="{{list.title}}" ng-disabled="">
+                  on-swipe-right="list.completed = !list.completed;"
+                  on-hold="list.editable = !list.editable"
+                >
+            <input ng-show="list.editable"
+                   class="home-list-item home-list-input"
+                   type="text"
+                   ng-model="list.title"
+                   ng-model-options="{ updateOn: 'blur' }"
+                   value="{{list.title}}">
+            <span ng-show="!list.editable" class="home-list-item home-list-input">{{list.title}}</span>
         </ion-item>
         <p ng-show="!lists.length" class="empty-list text-center">
             <i class="icon ion-sad-outline black empty-list-icon"></i>
