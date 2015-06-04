@@ -1,24 +1,19 @@
 (function (){
     angular
-        .module('homeController', ['userService'])
-        .controller('homeController', homeController);
+        .module('listController', ['userService'])
+        .controller('listController', listController);
 
-    function homeController($scope, $q) {
+    function listController($scope, $q, $stateParams) {
         var vm = $scope;
 
-        vm.title = "2 Due";
+        vm.title = $stateParams.listId;
 
         vm.lists = [];
 
-        vm.lists = [{title: '1 hello', completed: true}];
+        vm.lists = [{title: $stateParams.listId, completed: false}];
 
         vm.console = function (message) {
             console.log(message);
-        };
-
-        vm.onHold = function (listTitle) {
-            console.log(listTitle);
-
         };
 
         vm.newList = function () {

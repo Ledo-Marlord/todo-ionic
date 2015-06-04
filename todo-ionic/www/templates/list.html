@@ -5,8 +5,6 @@
                   class="button home-list-item"
                   ng-class="list.completed ? 'strikethrough' : ''"
                   data="{{list.title}}"
-                  on-hold="onHold(list.title);"
-                  ui-sref="list({listId: list.title})"
                   on-swipe-left="list.completed = !list.completed;"
                   on-swipe-right="list.completed = !list.completed;">
             <input class="home-list-item home-list-input" type="text" value="{{list.title}}" ng-disabled="">

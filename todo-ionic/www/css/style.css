@@ -96,7 +96,7 @@
 
 .popover-about {
     max-width: 200px;
-    max-height: 40px;
+    max-height: 95px;
 }
 
 .popover-button {
@@ -135,4 +135,11 @@
 
 .about-links {
     text-decoration: none !important;
+}
+
+.about-img {
+    box-shadow: none !important;
+    border-radius: 50%;
+    height: 75px;
+    margin-left: 23%;
 }

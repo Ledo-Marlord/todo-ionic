@@ -9,6 +9,8 @@
                             '<ion-content scroll="false" class="popover-content">' +
                                 '<ion-item class="button popover-button" href="#/about" ng-click="closePopover();"> About Us' +
                                 '</ion-item>' +
+                                '<ion-item class="button popover-button" href="#/list" ng-click="closePopover();"> Lists' +
+                                '</ion-item>' +
                             '</ion-content>' +
                         '</ion-popover-view>';
 

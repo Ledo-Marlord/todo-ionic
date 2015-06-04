@@ -37,6 +37,12 @@
                 controller: 'homeController'
             })
 
+            .state('list', {
+                url: '/list/:listId',
+                templateUrl: 'templates/list.html',
+                controller: 'listController'
+            })
+
             .state('about', {
                 url: '/about',
                 templateUrl: 'templates/about.html',
