@@ -5,11 +5,10 @@
                   class="button home-list-item"
                   ng-class="list.completed ? 'strikethrough' : ''"
                   data="{{list.title}}"
-                  ui-sref="list({listId: list.title})"
                   on-swipe-left="list.completed = !list.completed;"
                   on-swipe-right="list.completed = !list.completed;"
                   on-hold="list.editable = !list.editable"
-                >
+                  on-double-tap="onDoubleClick(list.title)">
             <input ng-show="list.editable"
                    class="home-list-item home-list-input"
                    type="text"

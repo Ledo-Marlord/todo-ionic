@@ -3,7 +3,7 @@
         .module('homeController', ['userService'])
         .controller('homeController', homeController);
 
-    function homeController($scope, $q) {
+    function homeController($scope, $q, $state) {
         var vm = $scope;
 
         vm.title = "2 Due";
@@ -16,9 +16,8 @@
             console.log(message);
         };
 
-        vm.onHold = function (listTitle) {
-            console.log(listTitle);
-
+        vm.onDoubleClick = function (listTitle) {
+            $state.go('list', {listId: listTitle});
         };
 
         vm.newList = function () {
