@@ -1,22 +1,28 @@
 <ion-view view-title="{{title}}">
     <ion-content class="homepage-background has-footer">
         <ion-refresher pulling-text="Remove Checked" on-refresh="clearCompleted()"></ion-refresher>
-        <ion-item collection-repeat="list in lists"
-                  class="button home-list-item"
-                  ng-class="list.completed ? 'strikethrough' : ''"
-                  data="{{list.title}}"
-                  on-swipe-left="list.completed = !list.completed;"
-                  on-swipe-right="list.completed = !list.completed;"
-                  on-hold="list.editable = !list.editable"
-                  on-double-tap="onDoubleClick(list.title)">
-            <input ng-show="list.editable"
-                   class="home-list-item home-list-input"
-                   type="text"
-                   ng-model="list.title"
-                   ng-model-options="{ updateOn: 'blur' }"
-                   value="{{list.title}}">
-            <span ng-show="!list.editable" class="home-list-item home-list-input">{{list.title}}</span>
-        </ion-item>
+        <ion-list can-swipe="listCanSwipe"
+                  show-delete="shouldShowDelete"
+                  show-reorder="shouldShowReorder">
+            <ion-item collection-repeat="list in lists"
+                      class="button home-list-item"
+                      ng-class="(list.completed ? 'strikethrough' : '') + ' ' + (list.editable ? 'editable-item' : '')"
+                      data="{{list.title}}"
+                      on-swipe-right="list.completed = !list.completed;"
+                      on-hold="list.editable = !list.editable"
+                      on-double-tap="onDoubleClick(list.title)">
+                <input ng-show="list.editable"
+                       class="home-list-item home-list-input edit-input"
+                       type="text"
+                       ng-model="list.title"
+                       ng-model-options="{ updateOn: 'blur' }"
+                       >
+                <span ng-show="!list.editable" class="home-list-item home-list-input">{{list.title}}</span>
+                <!--<ion-reorder-button class="ion-navicon"-->
+                                    <!--on-reorder="reorderItem(item, $fromIndex, $toIndex)">-->
+                <!--</ion-reorder-button>-->
+            </ion-item>
+        </ion-list>
         <p ng-show="!lists.length" class="empty-list text-center">
             <i class="icon ion-sad-outline black empty-list-icon"></i>
             <br/>

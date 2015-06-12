@@ -1,15 +1,15 @@
-<ion-view view-title="{{title}}">
+<ion-view view-title="List: {{title}}">
     <ion-content class="homepage-background has-footer">
         <ion-refresher pulling-text="Remove Checked" on-refresh="clearCompleted()"></ion-refresher>
-        <ion-item collection-repeat="list in lists"
+        <ion-item collection-repeat="item in items"
                   class="button home-list-item"
-                  ng-class="list.completed ? 'strikethrough' : ''"
-                  data="{{list.title}}"
-                  on-swipe-left="list.completed = !list.completed;"
-                  on-swipe-right="list.completed = !list.completed;">
-            <input class="home-list-item home-list-input" type="text" value="{{list.title}}" ng-disabled="">
+                  ng-class="item.completed ? 'strikethrough' : ''"
+                  data="{{item.title}}"
+                  on-swipe-left="item.completed = !item.completed;"
+                  on-swipe-right="item.completed = !item.completed;">
+            <span class="home-list-item home-list-input">{{item.title}}</span>
         </ion-item>
-        <p ng-show="!lists.length" class="empty-list text-center">
+        <p ng-show="!items.length" class="empty-list text-center">
             <i class="icon ion-sad-outline black empty-list-icon"></i>
             <br/>
             <br/>
@@ -18,7 +18,7 @@
     </ion-content>
     <div class="bar bar-footer homepage-background">
         <div class="buttons buttons-right">
-            <button class="button button-positive button-fab" ng-click="newList();">
+            <button class="button button-positive button-fab" ng-click="newItem();">
                 <i class="icon ion-plus white"></i>
             </button>
         </div>

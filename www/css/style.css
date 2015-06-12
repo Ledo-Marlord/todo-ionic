@@ -15,6 +15,10 @@
     color: white;
 }
 
+#login-title > span {
+    color: dimgray;
+}
+
 .login-item {
     background-color: white !important;
 }
@@ -69,13 +73,27 @@
 }
 
 .home-list-item {
+    text-transform: none;
     background-color: white !important;
     text-align: left !important;
     box-shadow: none !important;
 }
 
+.editable-item {
+    background-color: #BB6622 !important;
+}
+
+.edit-input {
+    color: ghostwhite !important;
+    font-weight: 500 !important;
+}
+
 .home-list-input {
     background-color: transparent !important;
+    width: 100% !important;
+    font-size: 1em;
+    vertical-align: 0 !important;
+    display: inline !important;
 }
 
 .strikethrough {
@@ -103,6 +121,11 @@
     color: #444;
     font-size: 20px;
     padding: 0px;
+}
+
+.home-list-item > .item-content {
+    padding: 0 !important;
+    font-size: 1em;
 }
 
 .popover-content .item-content {

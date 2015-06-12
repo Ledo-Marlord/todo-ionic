@@ -6,25 +6,30 @@
     function homeController($scope, $q, $state) {
         var vm = $scope;
 
-        vm.title = "2 Due";
+        vm.title = "2 Due Lists";
 
         vm.lists = [];
 
         vm.lists = [{title: '1 hello', completed: true, editable: false}];
+
+        vm.listCanSwipe = true;
+        vm.shouldShowDelete = false;
+        vm.shouldShowReorder = false;
 
         vm.console = function (message) {
             console.log(message);
         };
 
         vm.onDoubleClick = function (listTitle) {
+            console.log('Opening ', listTitle);
             $state.go('list', {listId: listTitle});
         };
 
         vm.newList = function () {
             var randomNumber = chance.integer({min:0, max:9});
             var randomWord = chance.word();
-            var randomValue = chance.bool();
-            vm.lists.push({title: randomNumber + ' ' + randomWord, completed: randomValue, editable: false});
+            var randomBool = chance.bool();
+            vm.lists.push({title: randomNumber + ' ' + randomWord, completed: randomBool, editable: false});
         };
 
         vm.clearCompleted = function () {
