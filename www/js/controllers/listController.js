@@ -12,9 +12,10 @@
 
         vm.items = [{title: $stateParams.listId, completed: false}];
 
-        vm.console = function (message) {
-            console.log(message);
-        };
+        //vm.console = function (message) {
+        //    console.log(message);
+        //};
+        // Commenting Out console log statements to contain probable memory leak
 
         vm.newItem = function () {
             var randomNumber = chance.integer({min:0, max:9});

@@ -16,10 +16,10 @@
         user.post = function (userName, userId, userPhone) {
             return $http.post('http://localhost:1337/api/users', {name: userName, userID: userId, phone: userPhone})
                 .then(function(data, status, headers, config) {
-                    console.log(data, status, headers, config);
+                    //console.log(data, status, headers, config);
                 },
                 function() {
-                    console.log('user POST error');
+                    //console.log('user POST error');
                     // called asynchronously if an error occurs
                     // or server returns response with an error status.
                 }

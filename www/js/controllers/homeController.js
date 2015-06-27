@@ -16,12 +16,12 @@
         vm.shouldShowDelete = false;
         vm.shouldShowReorder = false;
 
-        vm.console = function (message) {
-            console.log(message);
-        };
+        //vm.console = function (message) {
+        //    console.log(message);
+        //};
 
         vm.onDoubleClick = function (listTitle) {
-            console.log('Opening ', listTitle);
+            //console.log('Opening ', listTitle);
             $state.go('list', {listId: listTitle});
         };
 

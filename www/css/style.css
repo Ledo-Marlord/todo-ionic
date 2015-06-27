@@ -40,7 +40,8 @@
 }
 
 .notebook-background {
-    background-image: url('../img/notebook-731212_1280-slimmed.jpg');
+    /*background-image: url('../img/notebook-731212_1280-slimmed.jpg');*/
+    background-color: #bababa;
 }
 
 .register-background {
